@@ -1,0 +1,101 @@
+# Test local cache
+
+## this method show how to put one model into local cache
+GET http://localhost:8080/hello-world
+
+### This method show how to get one model from local cache
+GET http://localhost:9696/get-cache?metadata=user-1
+
+
+
+### call service
+POST http://localhost:8082/channel-inquiry/save
+Content-Type: application/json
+
+{
+  "channelEntity": {
+    "name": "code",
+    "code": "BRANCH",
+    "active": true,
+    "englishName": "englishName"
+  },
+  "inquiryProductDto": {
+    "title": "test",
+    "personInquiryType": "NAHAB",
+    "iranian": true,
+    "customerType": "REAL",
+    "gender": "MALE",
+    "mandatory": true,
+    "inquiryOrder": 1,
+    "hasWage":true,
+    "active": true,
+    "validityDuration": 20
+  }
+}
+
+
+
+
+
+
+
+###
+
+### call find by id subsystem service
+POST http://localhost:8082/subsystem/find-by-id
+Content-Type: application/json
+
+
+{
+  "id": 11311
+}
+### call delete subsystem service
+DELETE http://localhost:8082/subsystem/delete
+Content-Type: application/json
+
+{
+  "id": 1
+}
+### call sav save subsystem service
+POST http://localhost:8082/subsystem/save
+Content-Type: application/json
+
+{
+  "title": "dd",
+  "englishTitle":"dd",
+  "code": "14456",
+  "parameterGroups": [{"id": 11315,"version": 1},{"id": 11317,"version": 1}],
+  "active": false
+
+}
+
+### call update subsystem service
+POST http://localhost:8082/subsystem/update
+Content-Type: application/json
+
+{
+  "id": 41,
+  "title": "pp",
+  "englishTitle":"ff",
+  "code": "13536",
+  "parameterGroups": [{"id": 11314,"code":966 ,"title": "mhh", "englishTitle":"sss", "active": false,"subsystem":{"id": 11348,"version": 1},"version": 0,"readOnly": false}],
+  "active": false,
+  "version": 1
+
+}
+
+
+### call address service
+
+POST http://localhost:8082/address/find-by-id
+Content-Type: application/json
+
+{
+  "id": 285
+}
+
+
+###
+
+
+

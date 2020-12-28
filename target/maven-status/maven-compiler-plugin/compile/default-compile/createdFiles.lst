@@ -1,0 +1,5 @@
+org/example/resource/HelloWorldResource.class
+org/example/model/Saying.class
+org/example/health/TemplateHealthCheck.class
+org/example/config/HelloWorldConfiguration.class
+org/example/App.class

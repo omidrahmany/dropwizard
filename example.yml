@@ -1,0 +1,21 @@
+template: Hello, %s!
+
+defaultName: omid rahmani
+
+## Database settings.
+#database:
+#  # the name of your JDBC driver
+#  driverClass: oracle.jdbc.driver.OracleDriver
+#
+#  # the username
+#  user: core
+#
+#  # the password
+#  password: Dcr#1216254
+#
+#  # the JDBC URL
+#  url: jdbc:oracle:thin:@//10.12.47.16:1521/DEVELOPR2PDB
+#
+#  # any properties specific to your JDBC driver:
+#  properties:
+#    charSet: UTF-8

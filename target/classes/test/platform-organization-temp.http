@@ -1,0 +1,244 @@
+### call service set parent
+POST http://localhost:8082/organization-temp/save
+Content-Type: application/json
+Cookie: access_token =a84273e4-52d2-476c-b40d-8d171f4e8b6f
+
+{
+  "code": 5572,
+  "name": "TEST",
+  "englishName": "ENG_TITLE_5555",
+  "abbreviation": null,
+  "organizationType": "BRANCH",
+  "organizationLevelId": null,
+  "bicCode": "BIC_5572",
+  "openDate": null,
+  "internationalCode": null,
+  "branchCurrencyType": "FOREIGN_EXCHANGE_BASE",
+  "cbLicenseNumber": null,
+  "cbLicenseDate": null,
+  "movementLicenseNumber": null,
+  "movementLicenseDate": null,
+  "mainLand": true,
+  "leaf": false,
+  "organizationStatus": "ACTIVE",
+  "mergedOrganization": null,
+  "organizationCategory": "BRANCH",
+  "geoDivision": {
+    "id": 96001,
+    "version": 4
+  },
+  "parent": {"id": 954}
+}
+
+
+
+
+### call service - Save
+POST http://localhost:8082/organization-temp/save
+Content-Type: application/json
+Cookie: access_token =a84273e4-52d2-476c-b40d-8d171f4e8b6f
+
+{
+  "code": "5563",
+  "name": "شرکت فرزند",
+  "englishName": "ENG_TITLE_5552",
+  "abbreviation": null,
+  "organizationType": "BRANCH",
+  "organizationLevelId": null,
+  "bicCode": "BIC_5563",
+  "openDate": null,
+  "internationalCode": null,
+  "branchCurrencyType": "FOREIGN_EXCHANGE_BASE",
+  "cbLicenseNumber": null,
+  "cbLicenseDate": null,
+  "movementLicenseNumber": null,
+  "movementLicenseDate": null,
+  "mainLand": true,
+  "leaf": true,
+  "organizationStatus": "ACTIVE",
+  "mergedOrganization": null,
+  "organizationCategory": "BRANCH",
+  "geoDivision": {
+    "id": 96001,
+    "version": 4
+  }
+}
+
+### call service
+POST http://localhost:8082/organization-temp/update
+Content-Type: application/json
+Cookie: access_token = 48cdae50-7b1d-4bea-ac43-a8bdedc2e661
+
+{
+  "id": 959,
+  "version": 0,
+  "path": "0,14,212",
+  "code": "5562",
+  "name": "مركزي ",
+  "englishName": "ENG_TITLE_11554",
+  "abbreviation": null,
+  "organizationType": "BRANCH",
+  "organizationLevelId": null,
+  "bicCode": "BIC_1154",
+  "openDate": null,
+  "internationalCode": null,
+  "branchCurrencyType": "BASE",
+  "cbLicenseNumber": null,
+  "cbLicenseDate": null,
+  "movementLicenseNumber": null,
+  "movementLicenseDate": null,
+  "mainLand": true,
+  "leaf": true,
+  "organizationStatus": "ACTIVE",
+  "exclusiveCode": "1401154",
+  "mergedOrganization": null,
+  "organizationCategory": "BRANCH",
+  "path": "0,14,212",
+  "geoDivision": 50701
+}
+
+
+
+
+### call find by id  service
+POST http://localhost:8082/organization-temp/find-by-id
+Content-Type: application/json
+Cookie: access_token = 48cdae50-7b1d-4bea-ac43-a8bdedc2e661
+
+959
+
+
+
+###
+
+### call find by id  service
+POST http://localhost:8082/organization-temp/find-children
+Content-Type: application/json
+
+959
+
+
+
+###
+
+
+
+### call find by code  service
+POST http://localhost:8082/organization-temp/find-by-code
+Cookie: access_token =a84273e4-52d2-476c-b40d-8d171f4e8b6f
+Content-Type: application/json
+
+5559
+
+
+
+### call find by code  service
+POST http://localhost:8082/organization-temp/find-by-type
+Cookie: access_token =a84273e4-52d2-476c-b40d-8d171f4e8b6f
+Content-Type: application/json
+
+"BRANCH"
+
+
+###
+
+
+
+### call find by bic code  service
+POST http://localhost:8082/organization-temp/find-by-bic-code
+Content-Type: application/json
+Cookie: access_token =a84273e4-52d2-476c-b40d-8d171f4e8b6f
+
+
+BIC_5559
+
+
+###
+
+### call find by exclusive code  service
+POST http://localhost:8082/organization-temp/find-by-exclusive-code
+Content-Type: application/json
+Cookie: access_token =a84273e4-52d2-476c-b40d-8d171f4e8b6f
+
+1405561
+
+###
+### call find by exclusive code  service
+POST http://localhost:8082/organization-temp/delete
+Content-Type: application/json
+Cookie: access_token =a84273e4-52d2-476c-b40d-8d171f4e8b6f
+
+953
+
+###
+
+### call find by id  service
+POST http://localhost:8082/organization-temp/get-parent
+Content-Type: application/json
+Cookie: access_token =a84273e4-52d2-476c-b40d-8d171f4e8b6f
+
+954
+
+
+###
+
+
+### call find by id  service
+POST http://localhost:8082/organization-temp/find-organizations-by-identifiers
+Content-Type: application/json
+Cookie: access_token =a84273e4-52d2-476c-b40d-8d171f4e8b6f
+
+[
+  954,
+  957
+]
+
+
+###
+
+### call find paging channel service
+POST http://localhost:8082/organization-temp/find-paging
+Content-Type: application/json
+Cookie: access_token =a84273e4-52d2-476c-b40d-8d171f4e8b6f
+
+{
+  "start": 0,
+  "size": 2,
+  "filters": [
+    {
+      "fieldName": "organizationStatus",
+      "operation": "eq",
+      "value": "MERGED"
+    }
+  ]
+}
+
+### call find-branch-supervision  service
+POST http://localhost:8082//organization-temp/find-branch-supervision
+Content-Type: application/json
+Cookie: access_token =a84273e4-52d2-476c-b40d-8d171f4e8b6f
+
+954
+
+
+###
+
+
+
+
+### call find by exclusive code  service
+POST http://localhost:8082/organization-temp/find-branch-children
+Content-Type: application/json
+Cookie: access_token =a84273e4-52d2-476c-b40d-8d171f4e8b6f
+
+954
+
+### call find by code  service
+POST http://localhost:8082/organization-temp/find-by-type-and-code
+Content-Type: application/json
+Cookie: access_token =a84273e4-52d2-476c-b40d-8d171f4e8b6f
+
+{
+  "code": 5561,
+  "organizationType": "BRANCH"
+}
